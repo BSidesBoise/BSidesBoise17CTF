@@ -1,0 +1,13 @@
+version: "2"
+services:
+  xxe_ssrf:
+    build: ./xxe_ssrf
+    ports:
+        - "0.0.0.0:9999:80"
+    links:  
+      - xxe-nginx
+
+  xxe-nginx:
+    build: ./xxe_nginx
+    ports:
+      - "127.0.0.1:7777:80"

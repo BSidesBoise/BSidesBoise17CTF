@@ -1,0 +1,21 @@
+{
+  "name": "wsocket",
+  "version": "1.0.0",
+  "description": "CTF challenge using websockets.",
+  "main": "server.js",
+  "dependencies": {
+    "ws": "^3.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://ddsec@bitbucket.org/bsidesboisectf17/wsocket.git"
+  },
+  "author": "PlexTrac",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/bsidesboisectf17/wsocket#readme"
+}
