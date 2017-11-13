@@ -1,0 +1,14 @@
+Windows Solution:
+-----------------
+
+python -m pip install esptool
+esptool.py.exe -p COM10 -b 115200 read_flash 0x0 248000 flash.bin #Location to dump found here: https://github.com/esp8266/esp8266-wiki/wiki/Memory-Map
+strings.exe -n 38 flash.bin | findstr "bsb17_"
+
+Linux Solution:
+---------------
+pip3 install esptool
+python3 esptool.py -p /dev/ttyUSB1 -b 115200 read_flash 0x0 248000 /tmp/flash.bin #Location to dump found here: https://github.com/esp8266/esp8266-wiki/wiki/Memory-Map
+strings -n 38 flash.bin | grep -Fi 'bsb17_'
+
+Answer: bsb17_b249a287d454f5fbf7912febdbdb8cb2
